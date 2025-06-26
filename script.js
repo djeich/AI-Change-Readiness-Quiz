@@ -1,113 +1,113 @@
 const quizQuestions = [
     {
-      question: "What is the primary purpose of the LEGO® SERIOUS PLAY® method in organizational settings?",
+      question: "How comfortable are you with learning new technologies?",
       answers: {
-        a: "To create decorative models for the office",
-        b: "To unlock knowledge and insights through metaphorical model-building",
-        c: "To teach employees how to build with LEGO bricks",
-        d: "To provide a fun break from regular meetings"
+        a: "Very uncomfortable - I avoid new technology",
+        b: "Somewhat uncomfortable - I prefer familiar tools",
+        c: "Neutral - I can adapt when necessary",
+        d: "Comfortable - I enjoy learning new tools",
+        e: "Very comfortable - I actively seek out new technology"
       },
-      correctAnswer: "b",
-      explanation: "LSP is designed to unlock knowledge and insights that might be difficult to access through conventional methods, using metaphorical model-building as a tool for deeper understanding and communication."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "What is the correct sequence of a typical LSP workshop?",
+      question: "How do you feel about AI potentially changing aspects of your job?",
       answers: {
-        a: "Skills building → Challenge → Building → Sharing → Reflection",
-        b: "Introduction → Building → Sharing → Conclusion",
-        c: "Skills building → Challenge → Individual building → Sharing → Group discussion → Reflection",
-        d: "Challenge → Building → Sharing → Next challenge"
+        a: "Very concerned - I worry about job security",
+        b: "Somewhat concerned - I prefer things to stay the same",
+        c: "Neutral - I'll wait and see what happens",
+        d: "Optimistic - I see potential benefits",
+        e: "Very excited - I welcome AI integration"
       },
-      correctAnswer: "c",
-      explanation: "A well-structured LSP workshop follows this sequence to ensure participants are prepared and can effectively engage in the process."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "As an LSP facilitator, what should you do when a participant says 'I'm not creative' or 'I can't build'?",
+      question: "How would you rate your current understanding of AI capabilities?",
       answers: {
-        a: "Skip their turn and move to the next person",
-        b: "Build a model for them to demonstrate",
-        c: "Reassure them that LSP is not about artistic ability and everyone can build metaphorically",
-        d: "Give them a pre-built model to use"
+        a: "Very limited - I don't understand AI at all",
+        b: "Basic - I know it exists but not much more",
+        c: "Moderate - I understand some applications",
+        d: "Good - I understand most common uses",
+        e: "Excellent - I'm well-versed in AI capabilities"
       },
-      correctAnswer: "c",
-      explanation: "LSP is based on the principle that everyone can build metaphorically. The facilitator's role is to create psychological safety and emphasize that artistic ability is not required."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "What is the 'hand-mind connection' principle in LSP?",
+      question: "How often do you experiment with new tools or methods in your work?",
       answers: {
-        a: "It's about improving manual dexterity",
-        b: "The hands' neural connection to the brain enables new insights during building",
-        c: "It refers to hand-eye coordination",
-        d: "It's about learning to build faster"
+        a: "Never - I stick to proven methods",
+        b: "Rarely - Only when required",
+        c: "Sometimes - When I see potential benefits",
+        d: "Often - I regularly try new approaches",
+        e: "Always - I constantly experiment and innovate"
       },
-      correctAnswer: "b",
-      explanation: "The hand-mind connection is a key principle of LSP, recognizing that hands are connected to 70-80% of our brain cells, enabling new insights during the building process."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "How should a facilitator handle a participant who dominates group discussions during sharing?",
+      question: "How confident are you in your ability to learn AI tools?",
       answers: {
-        a: "Allow them to continue as they might have the best insights",
-        b: "Interrupt them immediately",
-        c: "Use time management techniques and ensure equal sharing time for all participants",
-        d: "Ask them to leave the session"
+        a: "Not confident at all - I doubt I could learn",
+        b: "Somewhat unconfident - I struggle with new tools",
+        c: "Moderately confident - I can learn with support",
+        d: "Confident - I'm good at learning new tools",
+        e: "Very confident - I excel at learning new technology"
       },
-      correctAnswer: "c",
-      explanation: "Good facilitation ensures equal participation. Using time management techniques helps maintain balance while respecting all contributions."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "What is the recommended approach for introducing complex challenges in an LSP workshop?",
+      question: "How do you typically respond when faced with workplace changes?",
       answers: {
-        a: "Present all challenges at once to save time",
-        b: "Start with simple warm-up challenges and gradually increase complexity",
-        c: "Skip warm-ups with experienced groups",
-        d: "Let participants choose their preferred challenge"
+        a: "Resist strongly - I prefer the status quo",
+        b: "Resist initially - I need time to adjust",
+        c: "Accept reluctantly - I go along with it",
+        d: "Embrace with caution - I see potential benefits",
+        e: "Embrace enthusiastically - I welcome change"
       },
-      correctAnswer: "b",
-      explanation: "Building confidence through progressive complexity ensures participants remain engaged and confident in their ability to tackle more complex challenges."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "When facilitating model sharing, what is the best practice?",
+      question: "How well do you understand how AI might benefit your specific role?",
       answers: {
-        a: "The facilitator should interpret the models for the group",
-        b: "Only the most articulate participants should share",
-        c: "The model builder tells their story while others listen, then questions can follow",
-        d: "Skip sharing to save time"
+        a: "Not at all - I don't see any benefits",
+        b: "Minimally - I see few potential benefits",
+        c: "Somewhat - I can imagine some applications",
+        d: "Well - I understand many potential benefits",
+        e: "Very well - I can identify numerous opportunities"
       },
-      correctAnswer: "c",
-      explanation: "The builder owns the meaning of their model. The facilitator's role is to ensure they can share their story without interruption before opening for questions."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "What is the purpose of the 'skills building' phase in LSP?",
+      question: "How comfortable are you with potential changes to your workflow?",
       answers: {
-        a: "To identify the most skilled builders",
-        b: "To familiarize participants with basic LEGO techniques and build confidence",
-        c: "To create impressive models",
-        d: "To test participants' creativity"
+        a: "Very uncomfortable - I prefer my current routine",
+        b: "Somewhat uncomfortable - Change disrupts my efficiency",
+        c: "Neutral - I can adapt if needed",
+        d: "Comfortable - I'm flexible with my workflow",
+        e: "Very comfortable - I enjoy optimizing my processes"
       },
-      correctAnswer: "b",
-      explanation: "Skills building helps participants become comfortable with the bricks and the process of building metaphorically, regardless of their previous LEGO experience."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "How should a facilitator handle a participant who consistently builds literal rather than metaphorical models?",
+      question: "How willing are you to share feedback about AI implementation?",
       answers: {
-        a: "Exclude them from future challenges",
-        b: "Ask probing questions to help them think metaphorically and provide examples",
-        c: "Tell them they're doing it wrong",
-        d: "Have other participants rebuild their models"
+        a: "Not willing - I prefer to stay quiet",
+        b: "Somewhat unwilling - I'll share if asked directly",
+        c: "Neutral - I'll provide feedback when appropriate",
+        d: "Willing - I actively share my thoughts",
+        e: "Very willing - I proactively provide detailed feedback"
       },
-      correctAnswer: "b",
-      explanation: "Through gentle guidance and probing questions, facilitators can help participants develop their metaphorical thinking skills."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     },
     {
-      question: "What is the best way to conclude an LSP workshop?",
+      question: "How confident are you that AI will enhance rather than threaten your job?",
       answers: {
-        a: "End immediately after the last build",
-        b: "Take photos of all models and clean up",
-        c: "Facilitate a reflection on key insights, learning, and next steps",
-        d: "Have participants vote on the best models"
+        a: "Not confident - I worry about job replacement",
+        b: "Somewhat unconfident - I have concerns",
+        c: "Neutral - I'm uncertain about the impact",
+        d: "Confident - I believe AI will be beneficial",
+        e: "Very confident - I'm excited about AI collaboration"
       },
-      correctAnswer: "c",
-      explanation: "A proper conclusion helps participants consolidate their insights and identify actionable next steps from the workshop."
+      points: { a: 1, b: 2, c: 3, d: 4, e: 5 }
     }
   ];
   
@@ -139,7 +139,6 @@ const quizQuestions = [
           <div class="question-number">Question ${index + 1}</div>
           <div class="question">${q.question}</div>
           <div class="answers">${answers.join("")}</div>
-          <div class="explanation" id="explanation${index}" style="display: none;"></div>
         </div>`
       );
     });
@@ -150,79 +149,107 @@ const quizQuestions = [
   
   function showResults() {
     const answerContainers = document.querySelectorAll(".answers");
-    const explanationContainers = document.querySelectorAll(".explanation");
-    let score = 0;
+    let totalScore = 0;
+    let answeredQuestions = 0;
   
     quizQuestions.forEach((q, index) => {
       const answerContainer = answerContainers[index];
-      const explanationContainer = explanationContainers[index];
       const selected = document.querySelector(`input[name=question${index}]:checked`);
-      const userAnswer = selected ? selected.value : undefined;
-  
-      if (userAnswer === q.correctAnswer) {
-        score++;
+      
+      if (selected) {
+        const userAnswer = selected.value;
+        const score = q.points[userAnswer];
+        totalScore += score;
+        answeredQuestions++;
+        
+        // Highlight the selected answer
         answerContainer.style.color = "#2ecc71";
-        explanationContainer.style.color = "#2ecc71";
-        explanationContainer.innerHTML = `✓ Correct! ${q.explanation}`;
       } else {
         answerContainer.style.color = "#e74c3c";
-        explanationContainer.style.color = "#e74c3c";
-        explanationContainer.innerHTML = `✗ Incorrect. The correct answer is ${q.correctAnswer.toUpperCase()}. ${q.explanation}`;
       }
-      explanationContainer.style.display = "block";
     });
   
     const resultsContainer = document.getElementById("results");
-    const percentage = (score / quizQuestions.length) * 100;
-    let feedback = "";
+    const maxScore = quizQuestions.length * 5;
+    const percentage = (totalScore / maxScore) * 100;
     
-    if (percentage === 100) {
-      feedback = "Excellent! You have a thorough understanding of LSP facilitation.";
-    } else if (percentage >= 80) {
-      feedback = "Great job! You have a strong grasp of LSP principles.";
+    let readinessLevel = "";
+    let feedback = "";
+    let badge = "";
+    
+    if (percentage >= 90) {
+      readinessLevel = "AI Champion";
+      feedback = "You're an AI champion! You're highly ready for AI adoption and can help lead change initiatives. Your enthusiasm and understanding make you an ideal advocate for AI integration.";
+      badge = "🏆";
+    } else if (percentage >= 75) {
+      readinessLevel = "AI Ready";
+      feedback = "You're well-prepared for AI adoption! You have a positive attitude toward change and good understanding of AI benefits. You'll likely adapt quickly to new AI tools.";
+      badge = "⭐";
     } else if (percentage >= 60) {
-      feedback = "Good effort! Consider reviewing the LSP Open Source materials to strengthen your knowledge.";
+      readinessLevel = "AI Curious";
+      feedback = "You're curious about AI and moderately ready for adoption. With some support and education, you'll likely become comfortable with AI integration.";
+      badge = "🤔";
+    } else if (percentage >= 45) {
+      readinessLevel = "AI Cautious";
+      feedback = "You're cautious about AI adoption and may need additional support. Consider learning more about AI benefits and how it can enhance rather than replace your work.";
+      badge = "⚠️";
     } else {
-      feedback = "We recommend reviewing the LSP Open Source materials before facilitating sessions.";
+      readinessLevel = "AI Resistant";
+      feedback = "You may be resistant to AI adoption. Consider discussing your concerns with leadership and learning more about how AI can support your role.";
+      badge = "🔄";
     }
     
     resultsContainer.innerHTML = `
       <div class="results-summary">
-        <h3>Quiz Results</h3>
-        <p>You got ${score} out of ${quizQuestions.length} correct (${percentage}%)</p>
-        <p>${feedback}</p>
+        <div class="badge-container">
+          <div class="badge">${badge}</div>
+        </div>
+        <h3>Your AI Change Readiness Results</h3>
+        <div class="score-display">
+          <div class="score-number">${totalScore}/${maxScore}</div>
+          <div class="score-percentage">${Math.round(percentage)}%</div>
+        </div>
+        <div class="readiness-level">${readinessLevel}</div>
+        <p class="feedback">${feedback}</p>
+        <div class="score-breakdown">
+          <h4>Score Breakdown:</h4>
+          <p>• 45-50 points: AI Champion (90-100%)</p>
+          <p>• 38-44 points: AI Ready (75-89%)</p>
+          <p>• 30-37 points: AI Curious (60-74%)</p>
+          <p>• 23-29 points: AI Cautious (45-59%)</p>
+          <p>• 10-22 points: AI Resistant (20-44%)</p>
+        </div>
       </div>
     `;
   
     // Show restart button and hide submit button
     document.getElementById("submit").style.display = "none";
     document.getElementById("restart").style.display = "block";
-  
-    // Scroll to results
-    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
   
   function restartQuiz() {
-    // Clear all selections and explanations
-    document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false);
-    document.querySelectorAll('.explanation').forEach(exp => exp.style.display = "none");
-    document.querySelectorAll('.answers').forEach(ans => ans.style.color = "inherit");
+    // Reset all radio buttons
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+      radio.checked = false;
+    });
     
-    // Clear results
+    // Reset answer colors
+    document.querySelectorAll('.answers').forEach(answer => {
+      answer.style.color = '';
+    });
+    
+    // Hide results and restart button
     document.getElementById("results").innerHTML = "";
-    
-    // Reset progress bar
-    updateProgress();
-    
-    // Show submit button and hide restart button
-    document.getElementById("submit").style.display = "block";
     document.getElementById("restart").style.display = "none";
+    document.getElementById("submit").style.display = "block";
     
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Reset progress
+    updateProgress();
   }
   
+  // Event listeners
   document.getElementById("submit").addEventListener("click", showResults);
   document.getElementById("restart").addEventListener("click", restartQuiz);
   
+  // Initialize quiz
   buildQuiz();
