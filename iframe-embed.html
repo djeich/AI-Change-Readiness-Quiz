@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Change Readiness Assessment - Embed Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .embed-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            min-height: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .responsive-iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 800px;
+            border: none;
+            border-radius: 8px;
+            transition: height 0.3s ease;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #666;
+            font-style: italic;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .embed-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Change Readiness Assessment - Embed Example</h1>
+        
+        <div class="instructions">
+            <h3>📋 Embed Instructions:</h3>
+            <p>This page demonstrates how to properly embed the AI Change Readiness Assessment. The iframe below automatically adjusts its height to show all content without scrolling issues.</p>
+        </div>
+        
+        <div class="embed-container">
+            <h2>Live Assessment Preview:</h2>
+            <div class="iframe-wrapper">
+                <iframe 
+                    id="assessment-iframe"
+                    src="https://ai-change-readiness-quiz.vercel.app/" 
+                    class="responsive-iframe"
+                    frameborder="0"
+                    scrolling="no"
+                    allowfullscreen>
+                </iframe>
+                <div class="loading" id="loading">Loading assessment...</div>
+            </div>
+        </div>
+        
+        <div class="embed-code">
+            <h3>📋 Embed Code for Your Website:</h3>
+            <pre><code>&lt;!-- Responsive iframe embed with auto-height adjustment --&gt;
+&lt;div style="position: relative; width: 100%; max-width: 800px; margin: 0 auto;"&gt;
+  &lt;iframe 
+    id="ai-assessment"
+    src="https://ai-change-readiness-quiz.vercel.app/" 
+    width="100%" 
+    height="800px" 
+    frameborder="0" 
+    scrolling="no"
+    style="border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"&gt;
+  &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// Auto-adjust iframe height for better embedding
+function adjustIframeHeight() {
+  const iframe = document.getElementById('ai-assessment');
+  if (iframe) {
+    iframe.addEventListener('load', function() {
+      // Listen for resize messages from iframe
+      window.addEventListener('message', function(event) {
+        if (event.data.type === 'resize') {
+          iframe.style.height = event.data.height + 'px';
+        }
+      });
+    });
+  }
+}
+
+// Initialize height adjustment
+adjustIframeHeight();
+&lt;/script&gt;</code></pre>
+        </div>
+        
+        <div class="embed-code">
+            <h3>🎯 Simple Embed Code (No JavaScript):</h3>
+            <pre><code>&lt;iframe 
+  src="https://ai-change-readiness-quiz.vercel.app/" 
+  width="100%" 
+  height="1200px" 
+  frameborder="0" 
+  scrolling="yes"
+  style="border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"&gt;
+&lt;/iframe&gt;</code></pre>
+        </div>
+        
+        <div class="instructions">
+            <h3>💡 Pro Tips:</h3>
+            <ul>
+                <li><strong>Height:</strong> Use 1200px for full assessment, 800px for compact view</li>
+                <li><strong>Scrolling:</strong> Set to "yes" if you want users to scroll within the iframe</li>
+                <li><strong>Responsive:</strong> The assessment automatically adapts to different screen sizes</li>
+                <li><strong>Loading:</strong> The assessment loads quickly on Vercel's global CDN</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Auto-adjust iframe height
+        function adjustIframeHeight() {
+            const iframe = document.getElementById('assessment-iframe');
+            const loading = document.getElementById('loading');
+            
+            if (iframe) {
+                iframe.addEventListener('load', function() {
+                    loading.style.display = 'none';
+                    
+                    // Listen for resize messages from iframe
+                    window.addEventListener('message', function(event) {
+                        if (event.data.type === 'resize') {
+                            iframe.style.height = event.data.height + 'px';
+                        }
+                    });
+                });
+            }
+        }
+
+        // Initialize
+        adjustIframeHeight();
+    </script>
+</body>
+</html> 

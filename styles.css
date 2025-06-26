@@ -26,6 +26,9 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
+    /* Ensure body can scroll properly in iframe */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -33,6 +36,8 @@ body {
     margin: 0 auto;
     padding: 2rem;
     position: relative;
+    /* Ensure container doesn't get cut off in iframe */
+    min-height: 100vh;
 }
 
 /* AI Background and Decorations */
@@ -380,7 +385,7 @@ footer {
     margin-top: 0.5rem;
 }
 
-/* Responsive design */
+/* Iframe-specific styles for better embedding */
 @media (max-width: 600px) {
     .container {
         padding: 1rem;
@@ -416,4 +421,31 @@ footer {
     .badge {
         font-size: 3rem;
     }
+}
+
+/* Enhanced iframe compatibility */
+html, body {
+    /* Ensure proper scrolling in iframe */
+    scroll-behavior: smooth;
+}
+
+/* Fix for iframe height issues */
+#quiz {
+    /* Ensure quiz container is properly sized */
+    min-height: 100vh;
+}
+
+/* Ensure buttons are always visible */
+.button-container {
+    position: sticky;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+/* Better spacing for iframe embedding */
+.question-container:last-of-type {
+    margin-bottom: 4rem; /* Extra space before buttons */
 } 

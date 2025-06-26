@@ -111,12 +111,35 @@ const quizQuestions = [
     }
   ];
   
+  // Check if running in iframe
+  function isInIframe() {
+    try {
+      return window !== window.top;
+    } catch (e) {
+      return true;
+    }
+  }
+  
+  // Adjust iframe height for better embedding
+  function adjustIframeHeight() {
+    if (isInIframe()) {
+      const height = document.body.scrollHeight;
+      window.parent.postMessage({
+        type: 'resize',
+        height: height
+      }, '*');
+    }
+  }
+  
   function updateProgress() {
     const answered = document.querySelectorAll('input[type="radio"]:checked').length;
     const total = quizQuestions.length;
     const progress = (answered / total) * 100;
     document.querySelector('.progress').style.width = `${progress}%`;
     document.querySelector('.progress-text').textContent = `${Math.round(progress)}% Complete`;
+    
+    // Adjust iframe height when progress updates
+    setTimeout(adjustIframeHeight, 100);
   }
   
   function buildQuiz() {
@@ -145,6 +168,9 @@ const quizQuestions = [
   
     quizContainer.innerHTML = output.join("");
     updateProgress();
+    
+    // Initial iframe height adjustment
+    setTimeout(adjustIframeHeight, 500);
   }
   
   function showResults() {
@@ -225,6 +251,12 @@ const quizQuestions = [
     // Show restart button and hide submit button
     document.getElementById("submit").style.display = "none";
     document.getElementById("restart").style.display = "block";
+    
+    // Adjust iframe height after showing results
+    setTimeout(adjustIframeHeight, 100);
+    
+    // Scroll to results smoothly
+    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   
   function restartQuiz() {
@@ -245,11 +277,17 @@ const quizQuestions = [
     
     // Reset progress
     updateProgress();
+    
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   
   // Event listeners
   document.getElementById("submit").addEventListener("click", showResults);
   document.getElementById("restart").addEventListener("click", restartQuiz);
+  
+  // Listen for window resize events
+  window.addEventListener('resize', adjustIframeHeight);
   
   // Initialize quiz
   buildQuiz();
