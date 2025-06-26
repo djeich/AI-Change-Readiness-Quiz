@@ -380,6 +380,23 @@ footer {
     color: #6b7280;
 }
 
+.resource-link {
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.resource-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.resource-link a:hover {
+    color: var(--ai-purple);
+    text-decoration: underline;
+}
+
 .copyright {
     font-size: 0.9rem;
     margin-top: 0.5rem;
